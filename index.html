@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quantum Care</title>
+    <style>
+      /* Optional: make the image fill the page and center it. */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto; /* Ensures proper scaling */
+        object-fit: contain; /* Maintains aspect ratio while fitting container */
+        padding: 20px; /* Optional: adds some breathing room around the image */
+        /* Optional: smooth transitions when resizing */
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Optional: adjust padding for mobile devices */
+      @media screen and (max-width: 768px) {
+        img {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="src/quantumcareimage.png" alt="quantumcareimage" />
+  </body>
+</html>
