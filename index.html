@@ -31,7 +31,12 @@
         padding: 20px 20px 0 20px; /* top, right, bottom, left */
       }
 
-      /* Target second image */
+      /* Target middle image */
+      img:nth-of-type(2) {
+        padding: 0 20px; /* top/bottom 0, left/right 20px */
+      }
+
+      /* Target last image */
       img:last-of-type {
         padding: 0 20px 20px 20px; /* top, right, bottom, left */
       }
@@ -39,6 +44,7 @@
       /* Optional: adjust padding for mobile devices */
       @media screen and (max-width: 768px) {
         img:first-of-type,
+        img:nth-of-type(2),
         img:last-of-type {
           padding: 10px 10px 0 10px; /* Reduced padding for mobile */
         }
@@ -47,6 +53,7 @@
   </head>
   <body>
     <img src="src/quantumcare-idea.png" alt="idea" />
+    <img src="src/vision.png" alt="vision" />
     <img src="src/join-quantumcare.png" alt="join" />
   </body>
 </html>
