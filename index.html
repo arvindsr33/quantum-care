@@ -14,28 +14,39 @@
       }
       body {
         display: flex;
+        flex-direction: column; /* Change to column to stack vertically */
         align-items: center;
         justify-content: center;
       }
       img {
         max-width: 100%;
-        max-height: 100%;
+        max-height: 50%; /* Change to 50% so both images take up half the height */
         height: auto; /* Ensures proper scaling */
         object-fit: contain; /* Maintains aspect ratio while fitting container */
-        padding: 20px; /* Optional: adds some breathing room around the image */
-        /* Optional: smooth transitions when resizing */
         transition: all 0.3s ease-in-out;
+      }
+
+      /* Target first image */
+      img:first-of-type {
+        padding: 20px 20px 0 20px; /* top, right, bottom, left */
+      }
+
+      /* Target second image */
+      img:last-of-type {
+        padding: 0 20px 20px 20px; /* top, right, bottom, left */
       }
 
       /* Optional: adjust padding for mobile devices */
       @media screen and (max-width: 768px) {
-        img {
-          padding: 10px;
+        img:first-of-type,
+        img:last-of-type {
+          padding: 10px 10px 0 10px; /* Reduced padding for mobile */
         }
       }
     </style>
   </head>
   <body>
+    <img src="src/single-image-website-v2.png" alt="quantumcareimage" />
     <img src="src/single-image-website-v2.png" alt="quantumcareimage" />
   </body>
 </html>
